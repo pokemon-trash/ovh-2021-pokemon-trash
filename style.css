@@ -1,0 +1,147 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Nunito', Arial, sans-serif;
+}
+body {
+	all: unset;
+	font-size: 1.5rem;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #18181a;
+}
+.main {
+	width: 80%;
+	max-width: 1024px;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 10px;
+}
+.main > div {
+	padding: 20px;
+}
+.head {
+	background-color: red;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	color: white;
+	font-weight: bold;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-size: 125%;
+}
+.head > img {
+	height: 80px;
+	margin-right: 20px;
+}
+
+.message {
+	display: flex;
+	text-align: justify;
+}
+.message img {
+	margin-right: 40px;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.social-links {
+	display: flex;
+}
+.social-links > a {
+	all: unset;
+	box-sizing: border-box;
+	display: block;
+	cursor: pointer;
+	width: calc(100%/3);
+	text-align: center;
+	padding: 10px;
+	background-color: black;
+	margin-left: 20px;
+	transition: background-color 0.3s;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+}
+.social-links > a > svg {
+	height: 48px;
+	width: 48px;
+	fill: white;
+}
+.social-links > a:first-child {
+	margin-left: 0;
+}
+
+.social-links > a:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.social-links > a.discord {
+	background-color: #7289DA;
+}
+.social-links > a.discord:hover {
+	background-color: rgba(114, 137, 218, 0.7);
+}
+
+.social-links > a.twitter {
+	background-color: #1DA1F2;
+}
+.social-links > a.twitter:hover {
+	background-color: rgba(29, 161, 242, 0.7);
+}
+.social-links > a.twitter svg {
+	height: 36px;
+}
+.social-links > a.facebook {
+	background-color: #4267B2;
+}
+.social-links > a.facebook:hover {
+	background-color: rgba(66, 103, 178, 0.7);
+}
+.social-links > a.facebook svg {
+	height: 36px;
+}
+@media only screen and (max-width: 640px) {
+	body {
+		height: auto;
+		font-size: 1.25rem;
+		background-color: white;
+	}
+	.head > img {
+		height: 120px;
+	}
+	.main {
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+		width: 100%;
+		max-width: none;
+	}
+	.main .head {
+		padding-top: 20px;
+		display: block;
+		text-align: center;
+		border-radius: 0;
+	}
+	.head > div {
+		margin-top: 20px;
+	}
+	.main > div {
+		padding: 20px;
+	}
+	.social-links {
+		display: block;
+	}
+	.social-links > a {
+		width: 100%;
+		margin-top: 10px;
+		margin-left: 0;
+	}
+}
